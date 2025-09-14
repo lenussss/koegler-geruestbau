@@ -157,33 +157,39 @@ footer{border-top:1px solid #e5e7eb; background:#fff}
     grid-template-columns:1fr;  /* Leistungen/Copy allein */
     gap:24px;
   }
-    /* 4) Über uns – Porträts mobil größer + breiter */
-  .owners {
-    grid-template-columns: 1fr 1fr;   /* zwei nebeneinander */
-    gap: 20px;
-  }
+/* 4) Über uns – Porträts mobil größer + breiter */
+.owners {
+  grid-template-columns: 1fr 1fr;   /* zwei nebeneinander */
+  gap: 24px;
+  justify-items: center;            /* Kacheln mittig ausrichten */
+}
 
-  .owner {
-    padding: 12px;                   /* mehr Innenabstand */
-  }
+.owner {
+  width: 100%;
+  max-width: 240px;                 /* jede Kachel darf breiter sein */
+  padding: 16px;                    /* mehr Innenabstand */
+}
 
-  .owner img {
-    width: 100%;
-    max-width: 200px;                /* größer */
-    margin: 0 auto;
-    aspect-ratio: 3/4;
-    border-radius: 12px;
-    object-fit: cover;
-    display: block;
-  }
+.owner img {
+  width: 100%;
+  max-width: 220px;                 /* Bild größer */
+  margin: 0 auto;
+  aspect-ratio: 3/4;
+  border-radius: 12px;
+  object-fit: cover;
+  display: block;
+}
 
-  .owner .name {
-    font-size: 16px;                 /* leicht größerer Text */
-  }
+.owner .name {
+  font-size: 17px;
+  margin-top: 8px;
+}
 
-  .owner .role {
-    font-size: 14px;
-  }
+.owner .role {
+  font-size: 15px;
+  color: var(--muted);
+}
+
 
   /* 5) Sonstige mobile Optimierungen */
   .benefits{grid-template-columns:1fr}
