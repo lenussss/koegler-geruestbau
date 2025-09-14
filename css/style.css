@@ -157,19 +157,32 @@ footer{border-top:1px solid #e5e7eb; background:#fff}
     grid-template-columns:1fr;  /* Leistungen/Copy allein */
     gap:24px;
   }
-  .owners{
-    grid-template-columns:1fr 1fr;  /* zwei Porträts in einer Zeile */
-    gap:16px;
+    /* 4) Über uns – Porträts mobil größer + breiter */
+  .owners {
+    grid-template-columns: 1fr 1fr;   /* zwei nebeneinander */
+    gap: 20px;
   }
-  .owner{padding:8px 0; text-align:center;}
-  .owner img{
-    width:100%;
-    max-width:160px;             /* deutlich kleiner */
-    margin:0 auto;               /* zentriert */
-    aspect-ratio: 3/4;           /* Portrait-Format */
-    border-radius:12px;
-    object-fit:cover;
-    display:block;
+
+  .owner {
+    padding: 12px;                   /* mehr Innenabstand */
+  }
+
+  .owner img {
+    width: 100%;
+    max-width: 200px;                /* größer */
+    margin: 0 auto;
+    aspect-ratio: 3/4;
+    border-radius: 12px;
+    object-fit: cover;
+    display: block;
+  }
+
+  .owner .name {
+    font-size: 16px;                 /* leicht größerer Text */
+  }
+
+  .owner .role {
+    font-size: 14px;
   }
 
   /* 5) Sonstige mobile Optimierungen */
