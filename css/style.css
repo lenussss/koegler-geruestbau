@@ -200,3 +200,65 @@ footer{border-top:1px solid #e5e7eb; background:#fff}
   .hero .wrap{align-items:center; text-align:center}
   .hero .wrap p{margin-left:auto; margin-right:auto}
 }
+
+/* ====== MOBILE LAYOUT (Phones & kleine Tablets) ====== */
+@media (max-width: 820px){
+  /* Navi/Footers wie zuvor gewünscht */
+  .nav-toggle{display:none !important;}
+  header nav{display:none !important;}
+  .footer-nav{display:none !important;}
+  .legal{margin-left:auto;}
+
+  /* Galerie: nativer Swipe */
+  .slider-controls{display:none !important;}
+  .slider-viewport{
+    overflow-x:auto; overflow-y:hidden;
+    scroll-snap-type:x mandatory;
+    -webkit-overflow-scrolling: touch;
+  }
+  .slider-track{
+    gap:12px; padding:8px;
+    transform:none !important;
+  }
+  .slide{
+    flex:0 0 86%;
+    scroll-snap-align:center;
+  }
+  .slide img{aspect-ratio:16/10;}
+
+  /* Über uns: Text oben, darunter 2 Portrait-Kacheln, BREITER + LUFT */
+  .about{
+    grid-template-columns:1fr !important;
+    gap:24px;
+  }
+  .owners{
+    display:grid !important;
+    grid-template-columns: repeat(2, minmax(0,1fr)) !important;
+    gap:20px;
+    justify-items:center; /* Kacheln mittig */
+  }
+  .owner{
+    width:100%;
+    max-width: 280px;          /* Kachel breiter */
+    padding:16px !important;   /* mehr Innenabstand */
+  }
+  .owner img{
+    width:100%;
+    max-width: 240px;          /* Bild größer */
+    margin:0 auto;
+    aspect-ratio:3/4;
+    border-radius:12px;
+    object-fit:cover;
+    display:block;
+  }
+  .owner .name{font-size:17px; margin-top:8px;}
+  .owner .role{font-size:15px; color:var(--muted);}
+
+  /* Sonstiges mobil */
+  .benefits{grid-template-columns:1fr !important;}
+  .contact{grid-template-columns:1fr !important;}
+  .hero{min-height:56vh}
+  .hero .wrap{align-items:center; text-align:center}
+  .hero .wrap p{margin-left:auto; margin-right:auto}
+}
+
